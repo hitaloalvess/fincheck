@@ -1,8 +1,8 @@
 import { Injectable, ConflictException, Inject } from '@nestjs/common';
 
 import { CreateUserDto } from './dto/create-user.dto';
-import { UsersRepository } from 'src/shared/infra/database/repositories/users.repositories';
-import { IGeneratorHash } from 'src/shared/adapters/HashAdapter/generatorHash.interface';
+import { UsersRepository } from 'src/shared/database/repositories/users.repositories';
+import { IGeneratorHash } from 'src/shared/adapters/HashAdapter/generator-hash.interface';
 
 @Injectable()
 export class UsersService {

@@ -3,7 +3,17 @@ import { BcryptjsService } from './HashAdapter/implementations/bcryptjs.service'
 
 @Global()
 @Module({
-  providers: [BcryptjsService],
-  exports: [BcryptjsService],
+  providers: [
+    {
+      provide: 'IGeneratorHash',
+      useClass: BcryptjsService,
+    },
+  ],
+  exports: [
+    {
+      provide: 'IGeneratorHash',
+      useClass: BcryptjsService,
+    },
+  ],
 })
 export class AdaptersModule {}

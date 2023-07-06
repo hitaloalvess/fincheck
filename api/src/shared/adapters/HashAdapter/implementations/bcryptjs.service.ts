@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { hash } from 'bcryptjs';
-import { IGeneratorHash } from '../generatorHash.interface';
+import { IGeneratorHash } from '../generator-hash.interface';
 
 @Injectable()
 export class BcryptjsService implements IGeneratorHash {
